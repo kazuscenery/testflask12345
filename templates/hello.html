@@ -1,0 +1,34 @@
+{% extends "layout.html" %}
+{% block content %}
+<h3>Hello</h3>
+こんにちは!{{ name }}さん。
+<div id="search">
+<!-- <form method="GET" action="http://www.google.com/search"> -->
+   <form method="GET" action="http://www.google.com/search">
+       <!--<div class="input-group">-->
+     <!--type属性をhiddenにしたときの大きな特徴は、「送信
+     したいデータがブラウザに表示されない」ということです。
+     ブラウザ上では見えないことを利用して、ユーザーからの
+     命令がどのような種類なのかをサーバーに送信するときに
+     判断させるために、hiddenを使うこともあります。-->
+    <input type="hidden" name="ie" value="utf-8">
+    <input type="hidden" name="oe" value="utf-8">
+    <input type="hidden" name="hl" value="ja">
+    <input type="hidden" name="lr" value="lang_ja">
+    <!--
+    <input type="hidden" name="as_sitesearch" value="www.tohoho-web.com">
+    -->
+      <!--<div class="input-group-btn">-->
+    <a href="http://www.google.com/" target="_top"></a>
+    <input type="text" name="q" size="20" maxlength="255" value="">
+    <input type="submit" name="btnG" value="検索">
+    <!--(By <a href="http://www.google.com/">Google</a>)-->
+    <!--(By <a href="hello.py">Google</a>)-->
+
+
+      <!--</div>-->
+    <!--</div>-->
+   </form>
+  </div>
+  {{ get }}です！
+{% endblock %}
